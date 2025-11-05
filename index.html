@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concelho — mapa</title>
+<style>
+  
+html, body {
+  margin: 0;
+  padding: 0;
+}
+  
+  body {
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: #ffcc00;
+    margin: 0 0 10px 0;
+  }
+
+  .mapa img {
+    width: 639px;    /* tamanho fixo para coords */
+    height: 390px;
+    display: block;
+    margin: 0 auto;
+    border: 10;
+  }
+
+  p.info {
+    margin: 12px 0 0 0;
+    color: #ccc;
+    font-size: 15px;
+  }
+
+  /* Ponto e mensagem — escondidos por defeito */
+  .dot, .note {
+    display: none;
+  }
+  
+  /* por defeito (PC) — esconder vídeo mobile */
+.video-mobile {
+  display: none;
+}
+
+  /* ======== Telemóveis ======== */
+  @media (max-width: 768px) {
+    html, body {
+    overflow-x: hidden; /* impede scroll lateral só no telemóvel */
+  }
+   /* esconde mapa e textos */
+    .mapa img, h2, p.info {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    /* mostra apenas o ponto e a nota */
+    .dot {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: white;
+      margin: 60px auto 10px;
+    }
+
+    .note {
+      display: block;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .video-mobile {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 20px auto;
+  }
+
+  .video-mobile iframe {
+    width: 100%;
+    height: auto;
+    transform: scale(1.4);
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+	  }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Mapa Interativo da Ilha da Madeira</h2>
+
+    <div class="mapa">
+      <img alt="Mapa da Madeira com concelhos" id="mapa" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png" usemap="#concelho" border="0" width="693" height="390"/>
+  </div>
+ 
+<map name="concelho">
+
+<area alt="Câmara de Lobos" coords="252,344,241,333,249,327,254,329,258,322,258,314,264,309,263,303,267,293,267,286,270,280,269,275,278,276,276,267,284,265,281,254,281,244,282,230,291,228,296,233,307,224,319,226,325,233,325,242,320,248,329,249,334,253,327,258,321,260,315,266,309,270,310,276,300,281,300,287,300,296,298,305,303,314,306,322,303,332,302,341,297,349,295,352,284,346,272,345,266,342" href="https://lgpmadeira.blogspot.com/p/camara-de-lobos.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijvI1Rp7Iba1YPtzCmuHCbXjbmB7XKsILyJ_EosszKJ5G2vEHI0FDJKGgdoUtzKhGdymYaf1iS6_OTr5AgVIxdX-jLaH_fNAd4ymbULrJA0x_jVKWa6AKbJzexx1EQTJqzBngLWTDOsUeVXhzpddNYcUhD7ER_TguqriZJZHgQEPErCGtG8De2YbeD8Sw/s1600/cl.png';" shape="poly" target="" title="Câmara de Lobos"></area>
+
+<area alt="Funchal" coords="296,353,302,339,306,328,307,316,301,310,298,302,303,298,300,289,301,281,308,277,309,268,315,269,317,263,323,258,333,253,336,260,344,266,350,264,356,271,364,280,370,291,376,298,381,296,385,304,385,313,388,321,392,332,402,339,394,345,399,356,386,352,373,349,357,350,347,354,340,358,330,362,318,365,311,357,303,355" href="https://lgpmadeira.blogspot.com/p/funchal.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUqpHid1w5iyxcXQeH0mdB1iMZjjLuOfls6v0E6HmISb0_Sc6EEidwV8IVc9tKfSp-G9lqRYNiKTGMG_dPm5Uytb1EDLKI3J12qm_K3_hKrsO4Ne9KaSXDSmoGUKhsX9Ea4e9ok72buKej6mBWh6E6tnywANCss_pq5G3AgGdktiin9tD3bq4tuEQiAGU/s1600/fnc.png';" shape="poly" target="" title="Funchal"></area>
+
+<area alt="Santa Cruz" coords="399,356,398,348,395,345,402,339,392,332,389,320,386,312,386,304,381,297,376,299,369,289,364,281,379,274,384,269,393,270,403,256,420,256,428,263,438,266,450,267,458,280,467,286,475,291,482,289,478,299,468,306,461,305,456,312,453,319,451,328,446,335,441,340,437,346,429,349,425,357,415,356,408,360" href="https://lgpmadeira.blogspot.com/p/santa-cruz.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7KQzOyMsuGvJ4hyct98_QMyFeSQrr8RXH7L7tbMzMcovzDZ_lzlKkWWphOheqjbXhwOepspikQ9gXocMJjoNnRnt1OhmxyiDd-B12MdBVrX_LV06Y3fNHRpY4Wyv3jN-GSBnwWOyQviFtWujkEMcycjoh_J08DbLuVax4ox1wVJCY0kt4PQ7iHPlQB7E/s1600/sc.png';" shape="poly" target="" title="Santa Cruz"></area>
+
+<area alt="Machico" coords="482,289,475,289,471,286,464,283,458,277,450,266,444,267,434,263,427,262,420,256,405,254,392,268,384,269,379,273,372,275,363,279,357,271,367,271,372,256,374,246,398,242,399,234,400,222,402,212,408,210,410,214,414,206,414,194,419,194,426,207,435,214,451,220,463,217,474,228,487,226,507,231,513,237,521,237,529,238,537,235,548,236,554,234,559,239,566,243,571,247,576,253,586,256,584,262,565,253,559,243,551,239,547,245,540,246,530,244,521,245,517,252,510,251,504,253,499,259,494,266,489,272,489,279,486,286" href="https://lgpmadeira.blogspot.com/p/machico.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7sPAUmTATJZM0BVhrL_17wVA_s4mZ5XekQUpgrVpIC_P9QYxBVAxYOqx-e92pj7jh_WDTU_Iidaj1SWXGDX2ljuZ-r8N007Cntky2xNevAavPTx9qelDxUBBJUh_9vatc4B0soAWBTy-wP9ady-15V7F65bLZV6vAqhkPH5DK4Sl5TF1_gtooCcqUwqY/s1600/m.png';" shape="poly" target="" title="Machico"></area>
+
+<area alt="Porto Santo" coords="527,160,524,151,524,145,524,134,524,127,517,122,513,115,509,107,517,107,524,99,528,87,530,75,533,67,544,64,550,53,558,53,569,48,580,38,590,47,598,51,603,44,605,51,604,58,602,63,606,69,609,75,602,77,604,85,608,90,610,97,618,101,619,89,599,89,589,87,576,89,566,95,556,103,546,113,540,120,533,125,529,129,517,138,512,146,514,153,520,157" href="https://lgpmadeira.blogspot.com/p/porto-santo.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOIuvaOIVol-LcHUenkN0SVKWBxuFSCnB0zHumENaGVpxsRoQvOrGp7wmMQX3r8EsZOeZrkTT9qn-MJbl5utR79X5_ZlcPcVFZyZzd2D8dGPlOLlqP0WuPrzrOBlyTloYAy4n4qfsxEwfuPX29ah2sSQ7Xy1M5z-M0VoMlT3LfOiGYnd6R_cNGNPEVT2s/s1600/pxo.png';" shape="poly" target="" title="Porto Santo"></area>
+
+<area alt="Santana" coords="415,196,414,205,411,212,405,210,402,216,402,224,399,236,395,242,375,246,371,259,367,270,356,272,350,263,345,265,333,258,333,251,321,246,326,240,323,229,320,225,308,224,310,210,303,206,313,190,313,173,311,164,304,157,295,151,311,147,330,146,345,141,357,141,363,147,371,150,378,154,386,164,392,170,402,170,397,178,399,187,408,187" href="https://lgpmadeira.blogspot.com/p/santana.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYi16Od1n-YR7z3hlXn9wBp2RES1FFnNUHyxj04fhPrthOIGLtnrl3NyRAqAfmfmIWm03iu11s4_iUXVzTUviUPp9g7kslZMrf7wE_egQsBy1m2qnn1PwT9wRp2ZogzABopus79GXUAlGFXXZ4yUelX3K4EY15bH4r71gPwtu99PVJtSgEUKNgcELC_3I/s1600/s.png';" shape="poly" target="" title="Santana"></area>
+
+<area alt="São Vicente" coords="295,150,306,159,313,164,313,171,313,187,308,197,303,203,302,209,310,209,309,219,302,230,294,231,287,228,280,232,268,228,255,233,242,229,237,235,224,239,216,230,197,215,192,206,195,198,198,187,202,176,206,166,218,168,227,167,235,167,246,161,254,163,261,157,268,154,277,147,284,151" href="https://lgpmadeira.blogspot.com/p/sao-vicente.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFt8d7sJRXun_q_dAODMbCseA7TdJVQeEjmEiCOmgWxqBtOklD5GXGLNeLKggyaDdMFyiZF99iLVYd1TzQo1L79EOj4AwkMh1Ex8LFFZ-H447tjujqcuPc7gsYaDKB11GzbRpNZ8R_68_tkcfPfUt2tzBAFxK99hOhiUzMqTomZ4DWGeeALMm2RTbd1GY/s1600/sv.png';" shape="poly" target="" title="São Vicente"></area>
+
+<area alt="Porto Moniz" coords="205,165,194,204,173,217,152,214,141,214,130,207,128,197,120,191,117,179,117,172,109,167,105,174,89,168,87,170,84,166,77,158,73,151,65,145,54,136,65,121,76,115,84,102,93,102,101,108,117,102,112,109,119,114,129,119,129,125,137,133,142,143,149,148,155,151,163,150,170,149,175,155,175,161,180,164,189,161" href="https://lgpmadeira.blogspot.com/p/porto-moniz.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaMekBkNUNaj_-tSKI9jy3igH1BCG-uIae3YAP44JjzkCoE3QktCHEnEx1BVVpHV9OxRJKb5DN0pF8ioTZ5CVlmRW1csudE074eVfUGBwgzm3zYoA70P2zBaPUV81In8VTCiAMlAVZJJ5VI4XT-tz7KHhY2jxo-LU3SYVUr11gToETMxhBqiUVvbPGge8/s1600/pm.png';" shape="poly" target="" title="Porto Moniz"></area>
+
+<area alt="Calheta" coords="54,137,48,139,41,151,30,160,21,162,23,169,34,176,37,185,39,193,42,200,41,206,43,213,50,219,54,226,58,232,63,236,67,241,70,248,78,256,83,256,93,266,97,265,104,271,110,272,120,278,129,280,134,286,137,287,139,279,142,271,147,265,156,258,159,245,162,238,171,243,179,226,197,216,192,206,172,217,159,216,151,215,142,215,132,208,129,197,122,193,121,183,117,180,117,174,108,167,104,176,88,168,84,172,83,165,76,158,71,149,60,144" href="https://lgpmadeira.blogspot.com/p/calheta.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNai65hSQyuQ0o-NAQX4z8tDTuw2JLyUKvvr0LJO-lMlVUCjjV_Gcnds15KF5AU9bbhostQp6eof3h_gYfBKbKqeGRWP226HMv_U7EH6_BO6bShA61SSSUPV0Tg-Hv3I1PbI8nOqZ7B4IPaSImoQa08KMi1EUIKsm4Txh6d5JbByW2XZQfUaYRgth2MRY/s1600/c.png';" shape="poly" target="" title="Calheta"></area>
+
+<area alt="Ponta do Sol" coords="197,215,178,226,170,244,162,238,158,246,158,253,155,260,145,265,139,274,136,286,145,293,152,300,162,309,171,317,179,313,187,315,194,296,206,274,202,268,207,260,210,252,214,255,216,247,224,239,214,231" href="https://lgpmadeira.blogspot.com/p/ponta-do-sol.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnh55T_1ZkdwpBCS3f9CQJ8SC7JrEGu_eIGu9Ldab0oh7ti7SBe_6HfGlN74s16ZxOfRrPnEigjD5YNsJupAj8z-b9r0HhuwDHHZDwiJil_GGVOVL1d1j6DxcB-z5ThpF6KzUKmreFkqZaZgzp8pyztQ-AKu8lOCvW5ozXnsIGWtKz6GCt0P-JwL8P_9M/s1600/ps.png';" shape="poly" target="" title="Ponta do Sol"></area>
+
+<area alt="Ribeira Brava" coords="187,315,202,318,207,326,215,326,224,331,234,334,249,342,241,333,249,329,258,322,258,313,264,309,263,302,266,293,267,284,270,275,277,275,275,266,283,265,280,252,280,231,273,232,267,228,257,233,242,229,236,237,224,239,216,248,216,255,211,251,203,267,207,274,200,283,194,293,191,303" href="https://lgpmadeira.blogspot.com/p/ribeira-brava.html" onmouseout="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx2Qe3WXPrF3ypJapc4-6JP3NoaBXI0FXVTf_U3YSUU_snWIRFJ5wVf3B3JkiA4Tp3W35GiIlk2jeVPLoJzlfF733P-2doZVOYw_k3tQlbV3l5A7E49MtQiZrYZfBZNU-MM6HOzjxdwh8E7cWmSO3LLNt0QDnozoTG0xKzMSyp6kZ5znciDmQoViGPSPI/s1600/concelhos%20madeira.png';" onmouseover="document.getElementById('mapa').src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjN2wgNVgDbXJUacLRA2Emz3H30k1inand951Rhw8uHKQgUG7x_d-TNwq6zb18HXEra149NphNnmGUordELX2e7xwwwcEBCmmag004fiFsiZ7LKlUT0B3jtpo36Il78mqhYguwGS9_aNI-YmfTfCutpMEXW0V3iu1x5zrp4vgc_jZX8qSaNnXwTrDC12s/s1600/rb.pn';" shape="poly" target="" title="Ribeira Brava"></area>
+     </map>
+    </div>
+	<p class="info">Podes clicar nas áreas do mapa para ver mais detalhes.</p>
+    <!-- ponto que aparece apenas no telemóvel -->
+    <!--div class="dot">.</div-->
+	
+<div class="video-mobile">
+  <iframe src="https://www.youtube.com/embed/BF4F_oPp_jQ?rel=0&modestbranding=1&controls=0&autoplay=1&mute=1&disablekb=1&showinfo=0&loop=1&playlist=BF4F_oPp_jQ" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+	<!--div class="dot">
+  <iframe width="320" height="180" src="https://www.youtube.com/embed/xxxxxxx" allowfullscreen></iframe>
+</div-->
+    <div class="note">Mapa disponível em computador</div>
+  </div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('data:text/javascript,self.addEventListener("install",()=>console.log("SW ok")));')
+  .then(() => console.log("Service Worker registado"))
+  .catch(err => console.log("Erro:", err));
+}
+</script>
+</body>
+</html>
