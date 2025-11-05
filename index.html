@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#008000">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Concelho — mapa</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LGP Madeira</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#001e80">
+  <style>
   
 html, body {
 	overflow-x: hidden; /* impede scroll lateral só no telemóvel */
@@ -16,7 +16,7 @@ html, body {
   
   body {
     background: black;
-    color: white;
+    color: #f4fff4;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -25,17 +25,20 @@ html, body {
 </style>
 </head>
 <body>
-<!--p>toca nos três pontinhos ⋮ (menu) no canto superior direito</p>
-<p>escolhe “Adicionar ao ecrã principal”</p-->
-	<p>Esperar um pouco...</p>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
-  }
-  // Espera 2 segundos antes de ir para o blog
-  setTimeout(function() {
-    window.location.href = "https://lgpmadeira.blogspot.com/";
-  }, 0);
-</script>
+  <h2>Esperar um pouco...</h2>
+  <p>A abrir o blogue LGP Madeira...</p>
+
+  <script>
+    // Redirecionar para o blogue depois de 2 segundos
+    setTimeout(() => {
+      window.location.href = "https://lgpmadeira.blogspot.com/";
+    }, 2000);
+
+    // Registar o Service Worker (necessário para o aviso "Instalar App")
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
 </body>
 </html>
+
