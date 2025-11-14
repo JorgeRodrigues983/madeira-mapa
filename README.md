@@ -1,5 +1,6 @@
 # Concelhos e Freguesias da RAM em LGP.
 Exlusivo para apenas criação da APP no telemovel.
-Link é (atenção, sem www... é https://
+
+O Link é (atenção, não é https://www! é https://jorge!)
 
 jorgerodrigues983.github.io/lgpmadeira
