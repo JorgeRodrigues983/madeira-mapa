@@ -1,1 +1,5 @@
-# madeira-mapa
+# Concelhos e Freguesias da RAM em LGP.
+# Exlusivo para apenas criação da APP no telemovel.
+# Link é: 
+
+jorgerodrigues983.github.io/lgpmadeira
